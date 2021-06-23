@@ -23,7 +23,7 @@ const UserProfile = () => {
             <img src={profilePic} className="avatar-xs rounded-circle mr-2" alt="Shreyu" />
 
             <div className="media-body">
-                <h6 className="pro-user-name mt-0 mb-0">Shreyu N</h6>
+                <h6 className="pro-user-name mt-0 mb-0">Alexander Templeton</h6>
                 <span className="pro-user-desc">Administrator</span>
             </div>
 

@@ -12,46 +12,47 @@ const Register = React.lazy(() => import('../pages/auth/Register'));
 const ForgetPassword = React.lazy(() => import('../pages/auth/ForgetPassword'));
 const Confirm = React.lazy(() => import('../pages/auth/Confirm'));
 // dashboard
-const Dashboard = React.lazy(() => import('../pages/dashboard'));
+//const Dashboard = React.lazy(() => import('../pages/dashboard'));
 // apps
-const CalendarApp = React.lazy(() => import('../pages/apps/Calendar'));
-const EmailInbox = React.lazy(() => import('../pages/apps/Email/Inbox'));
-const EmailDetail = React.lazy(() => import('../pages/apps/Email/Detail'));
-const EmailCompose = React.lazy(() => import('../pages/apps/Email/Compose'));
-const ProjectList = React.lazy(() => import('../pages/apps/Project/List'));
-const ProjectDetail = React.lazy(() => import('../pages/apps/Project/Detail/'));
-const TaskList = React.lazy(() => import('../pages/apps/Tasks/List'));
-const TaskBoard = React.lazy(() => import('../pages/apps/Tasks/Board'));
+const BalconyApp = React.lazy(() => import('../pages/apps/Balcony'));
+//const CalendarApp = React.lazy(() => import('../pages/apps/Calendar'));
+//const EmailInbox = React.lazy(() => import('../pages/apps/Email/Inbox'));
+//const EmailDetail = React.lazy(() => import('../pages/apps/Email/Detail'));
+//const EmailCompose = React.lazy(() => import('../pages/apps/Email/Compose'));
+//const ProjectList = React.lazy(() => import('../pages/apps/Project/List'));
+//const ProjectDetail = React.lazy(() => import('../pages/apps/Project/Detail/'));
+//const TaskList = React.lazy(() => import('../pages/apps/Tasks/List'));
+//const TaskBoard = React.lazy(() => import('../pages/apps/Tasks/Board'));
 
 // pages
-const Starter = React.lazy(() => import('../pages/other/Starter'));
-const Profile = React.lazy(() => import('../pages/other/Profile/'));
-const Activity = React.lazy(() => import('../pages/other/Activity'));
-const Invoice = React.lazy(() => import('../pages/other/Invoice'));
-const Pricing = React.lazy(() => import('../pages/other/Pricing'));
-const Error404 = React.lazy(() => import('../pages/other/Error404'));
-const Error500 = React.lazy(() => import('../pages/other/Error500'));
+//const Starter = React.lazy(() => import('../pages/other/Starter'));
+//const Profile = React.lazy(() => import('../pages/other/Profile/'));
+//const Activity = React.lazy(() => import('../pages/other/Activity'));
+//const Invoice = React.lazy(() => import('../pages/other/Invoice'));
+//const Pricing = React.lazy(() => import('../pages/other/Pricing'));
+//const Error404 = React.lazy(() => import('../pages/other/Error404'));
+//const Error500 = React.lazy(() => import('../pages/other/Error500'));
 
 // ui
-const BSComponents = React.lazy(() => import('../pages/uikit/BSComponents/'));
-const FeatherIcons = React.lazy(() => import('../pages/uikit/Icons/Feather'));
-const UniconsIcons = React.lazy(() => import('../pages/uikit/Icons/Unicons'));
-const Widgets = React.lazy(() => import('../pages/uikit/Widgets/'));
+//const BSComponents = React.lazy(() => import('../pages/uikit/BSComponents/'));
+//const FeatherIcons = React.lazy(() => import('../pages/uikit/Icons/Feather'));
+//const UniconsIcons = React.lazy(() => import('../pages/uikit/Icons/Unicons'));
+//const Widgets = React.lazy(() => import('../pages/uikit/Widgets/'));
 
 // charts
-const Charts = React.lazy(() => import('../pages/charts/'));
+//const Charts = React.lazy(() => import('../pages/charts/'));
 
 // forms
-const BasicForms = React.lazy(() => import('../pages/forms/Basic'));
-const FormAdvanced = React.lazy(() => import('../pages/forms/Advanced'));
-const FormValidation = React.lazy(() => import('../pages/forms/Validation'));
-const FormWizard = React.lazy(() => import('../pages/forms/Wizard'));
-const FileUpload = React.lazy(() => import('../pages/forms/FileUpload'));
-const Editor = React.lazy(() => import('../pages/forms/Editor'));
+//const BasicForms = React.lazy(() => import('../pages/forms/Basic'));
+//const FormAdvanced = React.lazy(() => import('../pages/forms/Advanced'));
+//const FormValidation = React.lazy(() => import('../pages/forms/Validation'));
+//const FormWizard = React.lazy(() => import('../pages/forms/Wizard'));
+//const FileUpload = React.lazy(() => import('../pages/forms/FileUpload'));
+//const Editor = React.lazy(() => import('../pages/forms/Editor'));
 
 // tables
-const BasicTables = React.lazy(() => import('../pages/tables/Basic'));
-const AdvancedTables = React.lazy(() => import('../pages/tables/Advanced'));
+//const BasicTables = React.lazy(() => import('../pages/tables/Basic'));
+//const AdvancedTables = React.lazy(() => import('../pages/tables/Advanced'));
 
 
 // handle auth and authorization
@@ -81,10 +82,10 @@ const PrivateRoute = ({ component: Component, roles, ...rest }) => (
 const rootRoute = {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/dashboard" />,
+    component: () => <Redirect to="/balcony" />,
     route: PrivateRoute,
 };
-
+/*
 // dashboards
 const dashboardRoutes = {
     path: '/dashboard',
@@ -140,7 +141,20 @@ const emailAppRoutes = {
         },
     ]
 };
-
+*/
+const balconyAppRoutes = {
+    path: '/balcony',
+    name: 'Dashboard',
+    icon: FeatherIcon.Briefcase,
+    badge: {
+        variant: 'danger',
+        text: '1',
+    },
+    component: BalconyApp,
+    route: PrivateRoute,
+    roles: ['Admin'],
+};
+/*
 const projectAppRoutes = {
     path: '/apps/projects',
     name: 'Projects',
@@ -185,7 +199,7 @@ const taskAppRoutes = {
     ],
 };
 
-const appRoutes = [calendarAppRoutes, emailAppRoutes, projectAppRoutes, taskAppRoutes];
+const appRoutes = [balconyAppRoutes, calendarAppRoutes, emailAppRoutes, projectAppRoutes, taskAppRoutes];
 
 
 
@@ -368,7 +382,7 @@ const tableRoutes = {
         }]
 };
 
-
+*/
 // auth
 const authRoutes = {
     path: '/account',
@@ -421,7 +435,7 @@ const flattenRoutes = routes => {
     });
     return flatRoutes;
 };
-
+/*
 // All routes
 const allRoutes = [
     rootRoute,
@@ -436,5 +450,17 @@ const allRoutes = [
 ];
 
 const authProtectedRoutes = [dashboardRoutes, ...appRoutes, pagesRoutes, componentsRoutes, chartRoutes, formsRoutes, tableRoutes];
+const allFlattenRoutes = flattenRoutes(allRoutes);
+export { allRoutes, authProtectedRoutes, allFlattenRoutes };
+
+*/
+// All routes
+const allRoutes = [
+    rootRoute,
+    balconyAppRoutes,
+    authRoutes,
+];
+
+const authProtectedRoutes = [balconyAppRoutes];
 const allFlattenRoutes = flattenRoutes(allRoutes);
 export { allRoutes, authProtectedRoutes, allFlattenRoutes };

@@ -11,8 +11,8 @@ class Footer extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
-                            2019 &copy; Shreyu. All Rights Reserved. Crafted with <i className='uil uil-heart text-danger font-size-12'></i> by 
-                                <a href="https://coderthemes.com" target="_blank" rel="noopener noreferrer" className="ml-1">Coderthemes</a>
+                            2021 &copy; Nemea LLC. All Rights Reserved. Crafted with <i className='uil uil-heart text-danger font-size-12'></i> by
+                            <a href="https://nemea.xyz" target="_blank" rel="noopener noreferrer" className="ml-1">Nemea LLC</a>
                         </div>
                     </div>
                 </div>

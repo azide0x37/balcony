@@ -163,7 +163,8 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #f3f4f7;
+$body-bg: lighten(theme-color("primary"), 30%);
+//$body-bg:                   #f3f4f7;
 $body-color:                $gray-600;
 
 

@@ -12,7 +12,7 @@ import {
 import * as layoutConstants from '../../constants/layout';
 
 const INIT_STATE = {
-    layoutType: layoutConstants.LAYOUT_VERTICAL,
+    layoutType: layoutConstants.LAYOUT_HORIZONTAL,
     layoutWidth: layoutConstants.LAYOUT_WIDTH_FLUID,
     leftSideBarTheme: layoutConstants.LEFT_SIDEBAR_THEME_DEFAULT,
     leftSideBarType: layoutConstants.LEFT_SIDEBAR_TYPE_FIXED,

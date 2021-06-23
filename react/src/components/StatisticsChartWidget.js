@@ -23,7 +23,7 @@ const StatisticsChartWidget = (props) => {
                 opacityFrom: 0.45,
                 opacityTo: 0.05,
                 stops: [45, 100]
-              },
+            },
         },
         xaxis: {
             crosshairs: {
@@ -61,8 +61,8 @@ const StatisticsChartWidget = (props) => {
     return (
 
         <Card className={classNames(props.bgClass)}>
-            <CardBody className="p-0">
-                <Media className="p-3">
+            <CardBody className="p-0 m-0">
+                <Media className="p-1">
                     <Media body>
                         <span className="text-muted text-uppercase font-size-12 font-weight-bold">{props.description}</span>
                         <h2 className="mb-0">{props.title}</h2>
