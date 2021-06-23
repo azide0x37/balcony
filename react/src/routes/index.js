@@ -12,7 +12,7 @@ const Register = React.lazy(() => import('../pages/auth/Register'));
 const ForgetPassword = React.lazy(() => import('../pages/auth/ForgetPassword'));
 const Confirm = React.lazy(() => import('../pages/auth/Confirm'));
 // dashboard
-//const Dashboard = React.lazy(() => import('../pages/dashboard'));
+const Dashboard = React.lazy(() => import('../pages/dashboard'));
 // apps
 const BalconyApp = React.lazy(() => import('../pages/apps/Balcony'));
 //const CalendarApp = React.lazy(() => import('../pages/apps/Calendar'));
@@ -78,13 +78,25 @@ const PrivateRoute = ({ component: Component, roles, ...rest }) => (
     />
 );
 
+const PublicRoute = ({ component: Component, roles, ...rest }) => (
+    <Route
+        {...rest}
+        render={props => {
+            // no auth so return component
+            return <Component {...props} />;
+        }}
+    />
+);
+
 // root routes
 const rootRoute = {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/balcony" />,
-    route: PrivateRoute,
+    icon: FeatherIcon.Home,
+    component: Dashboard,
+    route: PublicRoute
 };
+
 /*
 // dashboards
 const dashboardRoutes = {
@@ -142,9 +154,10 @@ const emailAppRoutes = {
     ]
 };
 */
+
 const balconyAppRoutes = {
     path: '/balcony',
-    name: 'Dashboard',
+    name: 'Balcony',
     icon: FeatherIcon.Briefcase,
     badge: {
         variant: 'danger',

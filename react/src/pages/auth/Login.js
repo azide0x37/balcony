@@ -49,7 +49,7 @@ class Login extends Component {
     renderRedirectToRoot = () => {
         const isAuthTokenValid = isUserAuthenticated();
         if (isAuthTokenValid) {
-            return <Redirect to='/' />
+            return <Redirect to='/balcony' />
         }
     }
 
@@ -74,7 +74,7 @@ class Login extends Component {
                                                 <div className="mx-auto mb-5">
                                                     <a href="/">
                                                         <img src={logo} alt="" height="24" />
-                                                        <h3 className="d-inline align-middle ml-1 text-logo">Shreyu</h3>
+                                                        <h3 className="d-inline align-middle ml-1 text-logo">Balcony</h3>
                                                     </a>
                                                 </div>
 
@@ -97,7 +97,7 @@ class Login extends Component {
                                                             </InputGroupAddon>
                                                             <AvInput type="text" name="username" id="username" placeholder="hello@coderthemes.com" value={this.state.username} required />
                                                         </InputGroup>
-                                                        
+
                                                         <AvFeedback>This field is invalid</AvFeedback>
                                                     </AvGroup>
 
@@ -128,15 +128,15 @@ class Login extends Component {
                                                 <div className="auth-page-sidebar">
                                                     <div className="overlay"></div>
                                                     <div className="auth-user-testimonial">
-                                                        <p className="font-size-24 font-weight-bold text-white mb-1">I simply love it!</p>
-                                                        <p className="lead">"It's a elegent templete. I love it very much!"</p>
-                                                        <p>- Admin User</p>
+                                                        <p className="font-size-24 font-weight-bold text-white mb-1">Balcony: Simple Server Monitoring</p>
+                                                        <p className="lead">"Run one command, pay one dollar, monitor one server. Couldn't be easier."</p>
+                                                        <p>- Alexander Templeton</p>
                                                     </div>
                                                 </div>
                                             </Col>
                                         </Row>
 
-                                        
+
                                     </CardBody>
                                 </Card>
                             </Col>

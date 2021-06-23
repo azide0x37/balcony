@@ -17,6 +17,7 @@
 Shreyu_v1.0.2/*
 
 #amplify
+react/amplify*
 *react/amplify/\#current-cloud-backend
 */amplify/.config/local-*
 */amplify/logs
@@ -35,3 +36,5 @@ aws-exports.js
 */amplifytools.xcconfig
 .secret-*
 .vscode/*
+react/.vscode/*
+react/.gitignore
